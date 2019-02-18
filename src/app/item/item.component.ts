@@ -9,7 +9,6 @@ import { ItemService } from '../item.service';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  selectedItem:Item;
   items;
 
   constructor(private itemService: ItemService) {
@@ -23,8 +22,5 @@ export class ItemComponent implements OnInit {
     this.itemService.getItems().subscribe(items => this.items = items);
   }
 
-  onSelect(item: Item): void {
-    this.selectedItem = item;
-  }
 
 }
